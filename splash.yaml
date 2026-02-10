@@ -1,0 +1,23 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+#dart run flutter_native_splash:create --path=splash.yaml
+  color: "#FFFFFF"
+  image:  assets/ios_logo.png
+  image_dark: assets/ios_logo.png
+  branding: assets/ios_branding.png
+  color_dark: "#707070"
+  branding_dark: assets/ios_branding.png
+  branding_bottom_padding: 24  
+
+
+  android_12:
+   color: "#FFFFFF"
+   color_dark: "#707070"
+   image: assets/android_logo.png
+   image_dark:  assets/android_dark.png
+   branding: assets/android_branding.png  
+   icon_background_color_dark: "#eeeeee"
+ 
+   
