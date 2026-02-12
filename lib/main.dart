@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:lotto_app/themes/theme_provider.dart';
 
 import 'package:lotto_app/widgets/custom_navbar.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+     create: (context) => ThemeProvider(),
+     child:  const MyApp()
+    )
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -22,7 +29,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-     home:CustomNavbar()
+     home:CustomNavbar(),
+     theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

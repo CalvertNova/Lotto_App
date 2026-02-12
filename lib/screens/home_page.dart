@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-
 class HomePage extends StatefulWidget {
- 
-  const HomePage({super.key,
-  
-  });
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -16,7 +11,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
+      appBar: AppBar(
         toolbarHeight: 90,
         backgroundColor: Colors.white,
         leadingWidth: 120,
@@ -68,19 +63,11 @@ class _HomePageState extends State<HomePage> {
         ),
         elevation: 0,
       ),
-      backgroundColor: Color.fromARGB(255, 255, 254, 248),
-      //to be SDUI 
-      body:Center(
-        child: Text("Native Splash",
-        style:
-         TextStyle(
-           fontSize: 24,
-           fontWeight: FontWeight.bold,fontFamily: "cerapro"
-        ),
-        ),
+      backgroundColor: Theme.of(context).colorScheme.surface,
+
+      body: Center(
+        child: Text("Native Splash"),
       ),
-     
     );
-  
   }
 }
