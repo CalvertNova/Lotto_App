@@ -38,7 +38,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
           currentIndex: _selectedIndex,
           onTap: _navigateBottomBar,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.white,
+          backgroundColor:Theme.of(context).colorScheme.secondary,
           items: [
             BottomNavigationBarItem(icon:Image.asset("assets/home.png",width: 27,height: 27,),
             label: "Home"

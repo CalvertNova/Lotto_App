@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:lotto_app/themes/theme_provider.dart';
-
 import 'package:lotto_app/widgets/custom_navbar.dart';
 import 'package:provider/provider.dart';
+import 'package:lotto_app/widgets/auth_provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-     create: (context) => ThemeProvider(),
+    MultiProvider(
+      providers: [
+         ChangeNotifierProvider(
+      create: (_) => AuthProvider()),
+        ChangeNotifierProvider(
+         create: (context) => ThemeProvider(), 
+        ),
+    ],
      child:  const MyApp()
     )
   );
